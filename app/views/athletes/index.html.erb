@@ -1,0 +1,21 @@
+<% title "Athletes" %>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Birthday</th>
+  </tr>
+  <% for athlete in @athletes %>
+    <tr>
+      <td><%= athlete.first_name %></td>
+      <td><%= athlete.last_name %></td>
+      <td><%= athlete.birthday %></td>
+      <td><%= link_to "Show", athlete %></td>
+      <td><%= link_to "Edit", edit_athlete_path(athlete) %></td>
+      <td><%= link_to "Destroy", athlete, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Athlete", new_athlete_path %></p>
