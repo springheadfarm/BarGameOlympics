@@ -1,5 +1,12 @@
 module ApplicationHelper
 
+
+	def athlete_menu_item(athlete)
+		content_tag(:li) do
+			content_tag(:a, athlete.full_name, :href => athlete_path(athlete))
+		end
+	end
+
 	def athlete_menu
 
 		content_tag(:li, nil, :class => "dropdown") do
@@ -9,13 +16,16 @@ module ApplicationHelper
 			end +
 
 			content_tag(:ul, nil, :class => "dropdown-menu") do
-				content_tag(:li) do
-					content_tag(:a, "somebody", :href => "#")
-				end +
+				Athlete.active.reduce('') { |c, x| 
+					c << athlete_menu_item(x)
+				}.html_safe +
+
 				content_tag(:li, nil, :class => "divider")  +
-				content_tag(:li) do
-					content_tag(:a, "somebody", :href => "#")
-				end
+
+				Athlete.inactive.reduce('') { |c, x| 
+					c << athlete_menu_item(x)
+				}.html_safe
+			
 			end
 
 		end
