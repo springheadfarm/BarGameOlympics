@@ -16,6 +16,9 @@ module ApplicationHelper
 			end +
 
 			content_tag(:ul, nil, :class => "dropdown-menu") do
+
+				content_tag(:li, "active", :class => "dropdown-header") +
+
 				Athlete.active.order('last_name, first_name').reduce('') { |c, x| 
 					c << athlete_menu_item(x)
 				}.html_safe +

@@ -7,4 +7,12 @@ module AthletesHelper
 	def weight_for_display(athlete)
 		athlete.weight? ? athlete.weight.floor : "Undisclosed"		
 	end
+
+	def age_birthday_display(athlete)
+		if athlete.birthday then
+			((Date.today - athlete.birthday).to_i/365.floor).to_s + " (#{athlete.birthday})"
+		else
+			"Undisclosed"
+		end
+	end
 end
