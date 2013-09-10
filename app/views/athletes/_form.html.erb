@@ -1,4 +1,4 @@
-<%= form_for @athlete do |f| %>
+<%= form_for @athlete, :html => {:multipart => true} do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :first_name %><br />
@@ -17,6 +17,16 @@
     <%= f.label :active %><br />
     <%= f.check_box :active %>
   </p>
+
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br/>
+    <%= f.text_field :remote_image_url %>
+  </p>
+
 
 
   <p><%= f.submit %></p>

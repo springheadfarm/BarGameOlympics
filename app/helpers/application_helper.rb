@@ -21,6 +21,7 @@ module ApplicationHelper
 				}.html_safe +
 
 				content_tag(:li, nil, :class => "divider")  +
+				content_tag(:li, "inactive", :class => "dropdown-header") +
 
 				Athlete.inactive.reduce('') { |c, x| 
 					c << athlete_menu_item(x)
@@ -31,6 +32,13 @@ module ApplicationHelper
 		end
 
 	end
+
+	def markdown(text)
+		@markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
+		@markdown.render(text).html_safe
+	end
+
+
 
 end
 

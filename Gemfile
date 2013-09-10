@@ -8,6 +8,14 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 
+gem 'redcarpet'
+
+# following two to support upload and scaling of athlete images
+# will use for picture gallery later
+gem 'carrierwave'
+gem 'fog'
+gem 'rmagick'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
