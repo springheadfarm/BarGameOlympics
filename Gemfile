@@ -33,6 +33,11 @@ gem 'jquery-rails', '< 3.0.0'
 gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 
 
+group :production do
+	gem "rails_12factor"
+end
+
+
 gem "nifty-generators", :group => :development
 
 gem "activeadmin", github: "gregbell/active_admin"

@@ -1,11 +1,18 @@
-<% title "Athlete" %>
+<% title "BGO - Athlete - #{@athlete.full_name}" %>
 
-<div class="jumbotron">
-	<%= markdown(@athlete.profile) if @athlete.profile %>
+
+<div class="col-md-9">
+	<div class="jumbotron">
+		<h3><%= @athlete.first_name %> <%= @athlete.last_name %></h3>
+		<%= image_tag @athlete.image_url(:medium).to_s, :class => "img-rounded pull-right" %>
+		<%= markdown(@athlete.profile) if @athlete.profile %>
+	</div>
 </div>
 
-<%= image_tag @athlete.image_url.to_s, :class => "img-rounded" %>
-<%= image_tag @athlete.image_url(:thumb).to_s, :class => "img-rounded" %>
+<div class="col-md-3">
+	<%= render 'tale_of_the_tape' %>
+	<%= render 'career_highlights' %>
+</div>
 
 <p>
   <%= link_to "Edit", edit_athlete_path(@athlete) %> |
