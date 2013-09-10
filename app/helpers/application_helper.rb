@@ -16,14 +16,14 @@ module ApplicationHelper
 			end +
 
 			content_tag(:ul, nil, :class => "dropdown-menu") do
-				Athlete.active.reduce('') { |c, x| 
+				Athlete.active.order('last_name, first_name').reduce('') { |c, x| 
 					c << athlete_menu_item(x)
 				}.html_safe +
 
 				content_tag(:li, nil, :class => "divider")  +
 				content_tag(:li, "inactive", :class => "dropdown-header") +
 
-				Athlete.inactive.reduce('') { |c, x| 
+				Athlete.inactive.order('last_name, first_name').reduce('') { |c, x| 
 					c << athlete_menu_item(x)
 				}.html_safe
 			
