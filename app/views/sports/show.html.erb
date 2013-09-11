@@ -1,0 +1,12 @@
+<% title "Sport" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sport.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_sport_path(@sport) %> |
+  <%= link_to "Destroy", @sport, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sports_path %>
+</p>

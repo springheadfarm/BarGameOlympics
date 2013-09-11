@@ -1,4 +1,6 @@
 BarGameOlympics::Application.routes.draw do
+  resources :sports
+
   resources :athletes
 
   %w[home about].each do |page|
