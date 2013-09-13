@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130911214950) do
+ActiveRecord::Schema.define(:version => 20130911220539) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -57,6 +57,24 @@ ActiveRecord::Schema.define(:version => 20130911214950) do
     t.float    "weight"
     t.text     "profile"
     t.string   "image"
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "sport_id"
+    t.integer  "venue_id"
+    t.datetime "started_at"
+    t.datetime "ended_at"
+    t.integer  "winner_id"
+    t.integer  "loser_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "participations", :force => true do |t|
+    t.integer  "athlete_id"
+    t.integer  "match_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sports", :force => true do |t|

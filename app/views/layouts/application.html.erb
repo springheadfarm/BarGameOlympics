@@ -13,27 +13,35 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <%= link_to "BGO", root_path, :class => "navbar-brand" %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><%= link_to "Home", root_path %></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
 
             <%= athlete_menu %>
 
+            <!-- For now these items are hidden in production -->
+
+            <% if Rails.env.development? then %>
+
+              <li><a href="#">Stats/Results</a></li>
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Tickets</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">More</a></li>
+
+            <% end %>
+
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top</a></li>
-          </ul>
+
+          <% if Rails.env.development? then %>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Login or Sign Up</a></li>
+            </ul>
+          <% end %>
+          
         </div><!--/.nav-collapse -->
       </div>
     </div>

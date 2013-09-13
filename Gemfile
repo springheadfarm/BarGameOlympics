@@ -37,8 +37,13 @@ group :production do
 	gem "rails_12factor"
 end
 
+group :development do
+	gem "nifty-generators"
+	gem "better_errors"
+	gem "binding_of_caller"
+end
 
-gem "nifty-generators", :group => :development
+
 
 gem "activeadmin", github: "gregbell/active_admin"
 
