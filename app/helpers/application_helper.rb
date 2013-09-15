@@ -1,10 +1,14 @@
 module ApplicationHelper
 
 
-	def athlete_menu_item(athlete)
+	def navbar_link(text, link)
 		content_tag(:li) do
-			content_tag(:a, athlete.full_name, :href => athlete_path(athlete))
+			content_tag(:a, text, :href => link)
 		end
+	end
+
+	def athlete_menu_item(athlete)
+		navbar_link athlete.full_name, athlete_path(athlete)
 	end
 
 	def athlete_menu
@@ -37,7 +41,7 @@ module ApplicationHelper
 	end
 
 	def markdown(text)
-		@markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
+		@markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :disable_indented_code_blocks => true)
 		@markdown.render(text).html_safe
 	end
 

@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
-  </head>
-  <body>
+	<head>
+		<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tag %>
+		<%= yield(:head) %>
+		</head>
+	<body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "BGO", root_path, :class => "navbar-brand" %>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<%= link_to "BGO", root_path, :class => "navbar-brand" %>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
 
-            <%= athlete_menu %>
+						<%= athlete_menu %>
 
-            <!-- For now these items are hidden in production -->
+						<!-- For now these items are hidden in production -->
 
-            <% if Rails.env.development? then %>
+						<% if Rails.env.development? then %>
 
-              <li><a href="#">Stats/Results</a></li>
-              <li><a href="#">Photos</a></li>
-              <li><a href="#">Store</a></li>
-              <li><a href="#">Tickets</a></li>
-              <li><a href="#">Rules</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">More</a></li>
+							<li><a href="#">Stats/Results</a></li>
+							<li><a href="#">Photos</a></li>
+							<li><a href="#">Store</a></li>
+							<%= navbar_link "Tickets", tickets_path %>
+							<li><a href="#">Rules</a></li>
+							<li><a href="#">Community</a></li>
+							<li><a href="#">More</a></li>
 
-            <% end %>
+						<% end %>
 
-          </ul>
+					</ul>
 
-          <% if Rails.env.development? then %>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Login or Sign Up</a></li>
-            </ul>
-          <% end %>
-          
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+					<% if Rails.env.development? then %>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="./">Login or Sign Up</a></li>
+						</ul>
+					<% end %>
 
-  <div class="container">
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
 
-    <%= yield %>
+		<div class="container">
 
-    <div class="row">
+			<%= yield %>
 
-      <script type="text/javascript"><!--
-        google_ad_client = "ca-pub-2802714891836755";
-        /* BGO Footer */
-        google_ad_slot = "5993507461";
-        google_ad_width = 728;
-        google_ad_height = 90;
-        //-->
-      </script>
-      <script type="text/javascript"
-        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-      </script>
-    </div>
+			<div class="row">
+				<div class='col-md-12'>
+					<div class="panel panel-default">
+						<script type="text/javascript"><!--
+							google_ad_client = "ca-pub-2802714891836755";
+							/* BGO Footer */
+							google_ad_slot = "5993507461";
+							google_ad_width = 728;
+							google_ad_height = 90;
+							//-->
+						</script>
+						<script type="text/javascript"
+							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+						</script>
+					</div>
+				</div>
+			</div>
 
-  </div>
+		</div>
 
-</body>
+	</body>
 </html>

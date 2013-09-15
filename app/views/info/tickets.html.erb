@@ -1,0 +1,188 @@
+<%= javascript_include_tag 'jquery.tools.min' %>
+
+<div class="row">
+	<div class="col-md-12">
+		<br />		
+		<h4>There are a variety of ticket packages available to suit every fan&#39;s needs.&nbsp; 
+		Check out the options below and contact
+		<a href="mailto:tickets@bargameolympics.com">tickets@bargameolympics.com</a> to 
+		check on ticket availability and to make a purchase.</h4>
+	</div>
+</div>
+
+<div class="row">
+
+	<div id="actions">
+	   <a class="prev">&laquo; Back</a>
+	   <a class="next">More Tickets &raquo;</a>
+	</div>
+		
+	<!-- root element for scrollable -->
+	<div class="scrollable vertical">
+	
+		<!-- root element for the scrollable elements -->
+		<div class="items">
+
+			<!-- first element. ROWS 1-3 -->
+			<div>
+				<%= ticket_package 'basic.gif' do %>
+					# Basic Package
+					Admission to both days of BGO VI competition.
+
+					Open bar and food service
+
+					$75 / person				
+				<% end %>
+
+				<%= ticket_package 'ultimate-fan.jpg' do %>
+					# Ultimate Fan Package
+					Guaranteed front row seating where event-appropriate for all events and 
+					ceremonies.
+
+					Open bar and food service.
+
+					One-of-a-kind signed athlete apparel, guaranteed photo-op with last year's 
+					all-around medalists, guaranteed car-bomb with the athletes.
+
+					$100 / person
+				<% end %>
+
+				<%= ticket_package 'healthy.gif' do %>
+					# Healthy Lifestyle Package
+
+					Guaranteed front row seating where event-appropriate for all events and 
+					ceremonies.
+
+					Full food service including vegan selections.  Juice bar.$50 / person
+				<% end %>
+			</div>
+		
+			<!-- ROWS 4-6 -->
+
+			<div>
+
+				<%= ticket_package 'physics.jpg' do %>
+					# Physics Package
+
+					Using our state-of-the-art facility, tickets holders will work hand-in-hand with BGO athletes
+					to tackle the fundamental questions of the natural universe and its wondrous properties. The 
+					program begins with an exciting hands-on collision of subatomic particles using our in-house 
+					Ottinger Particle Accelerator, to simulate conditions that existed shortly after the Big Bang. 
+					After a wine and cheese tasting, participants will jump back in with a stab at element creation, 
+					as BGO athletes lead the world closer to the “island of stability” (that much sought-after 
+					span in the periodic table where elements suddenly become stable again). A deep study of 
+					modern directed-energy weaponry and a lively cold fusion debate round out this amazing 3 hour program.
+
+					Package includes a BGO weights & mass set, a custom-fitted radiation suit, and 10 hours
+					of time on the Cray XT5 system located at our sister facility at the Oak Ridge National 
+					Laboratory (at a mutually agreed upon future date).
+
+					$895 / person
+				<% end %>
+
+				<%= ticket_package 'bromance.jpg' do %>
+					# Bromance Package
+
+					Every man needs another man in his life. A male friend with which to drink beers, 
+					boast of exploits, wrestle, laugh, and share deep hopes and dreams. The BGO recognizes 
+					this, and is proud to offer for 2012 this new exciting ticket package. As a ticket 
+					holder, you will be paired with a new best friend: a hand-picked live BGO athlete. 
+					For the entire two day span of the event, you will be able to sit next to your 
+					athlete-friend during down time, talk trash about other dudes, ogle any sweet females 
+					who wander by, admire a tasty a beverage, even lament your favorite sports team; the 
+					possibilities are endless. BGO athletes are universally regarded as the most charismatic 
+					people in all of sportsdom- so get ready to develop a man-crush for life!
+
+					This once in a lifetime package includes unlimited beer and wings, overnight accommodations 
+					on the floor of your athlete’s room, and a 8” x 12” framed picture of you and your new 
+					best friend. Also, as a Bromance ticket holder you will be entitled to replace 
+					Ms. BGO and award ALL medals your athlete wins during BGO VI!
+
+					$17,995 / person
+				<% end %>
+		
+				<%= ticket_package 'romance.jpg' do %>
+					# Romance Package
+
+					Looking to have a romantic rendezvous you'll never forget? The Romance Package 
+					is for you.
+
+					Deluxe suite at local hotel.
+
+					Photograph package of the love-birds at the BGO events.
+
+					Complimentary shuttle service to all venues.
+
+					Meet and greet session with athletes on Friday, February 17 and Pre-event breakfast with athletes on Saturday, February 18.
+
+					Access to special roped off VIP lounge.  Full bar and food service, including handcrafted BGO libations by our resident BGO mixologist.
+
+					$350 / person
+				<% end %>
+			</div>
+				
+			<!-- ROWS 7-9 -->
+			<div>
+				<%= ticket_package 'family.jpg' do %>
+					# Family Package
+
+					The perfect package for the family of four. This package includes tickets 
+					to all morning/afternoon events, including the 
+					opening ceremonies, round robin action in four sports (foosball, darts, pool, 
+					and ping pong) as well as full medal round action and award ceremonies for 
+					foosball and ping pong.
+
+					Includes 4 hot dogs, chips, and sodas.
+
+					Also includes athlete autograph session from 9 am - 9:30 am.
+
+					$100 / family of four
+				<% end %>
+
+				<%= ticket_package 'literature.jpg' do %>
+					# Literature Package
+
+					A dream experience for the wordsmith BGO fan. In addition to full event access, ticket-holders
+					will take part in exclusive athlete poetry readings and spoken word presentations. The
+					highlight of the affair will be an exclusive day-after seminar on Sunday, Feb 27th at 9am will allow 
+					participants to explore the BGO through creative writing workshops captained by BGO all-around medalists.
+
+					$295 / person
+				<% end %>
+
+				<%= ticket_package 'vip.png' do %>
+					# VIP Package
+
+					Meet and greet session with athletes on Friday, February 17.
+
+					Pre-event breakfast with athletes on Saturday, February 18.
+
+					Access to special roped off VIP lounge.  Full bar and food service, including handcrafted BGO libations by our resident BGO mixologist.
+
+					$100 / person
+				<% end %>
+			</div>
+
+			<!-- ROWS 10-12 -->
+			<div>
+				<%= ticket_package 'knight.jpg' do %>
+					# Ultimate Knight Package
+
+					The perfect setting for a fantastical weekend of BGO competition and live action role playing. Tickets 
+					holders will be able to become powerful wizards or deadly assassins by assuming the role of a custom, 
+					fully prepared medieval character. BGO Athletes will handcraft full body costumes for participants, as 
+					well as amazing full-scale demon and unicorn props.
+
+					Package includes unlimited elven waybread and mead, and choice of horse from the BGO stables.
+
+					$1,395 / person
+				<% end %>
+
+				<div class="item">
+				</div>
+				<div class="item">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

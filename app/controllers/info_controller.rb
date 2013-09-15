@@ -4,4 +4,8 @@ class InfoController < ApplicationController
 
   def home
   end
+
+  def tickets
+  	#render layout: 'blank'
+  end
 end

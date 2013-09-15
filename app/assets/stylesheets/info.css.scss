@@ -1,3 +1,74 @@
 // Place all the styles related to the info controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.vertical {  
+	
+	position:relative;
+	overflow:hidden;	
+
+	height: 630px;	 
+	border-top:1px solid #ddd;	
+}
+
+.items {	
+	position:absolute;
+	
+	height:20000em;	
+	margin: 0px;
+}
+
+
+.item {
+
+	border-bottom:1px solid #ddd;
+	margin:10px 0;
+	padding:15px;
+	font-size:10px;
+	height:200px;
+
+	img {
+		float:left;
+		margin-right:20px;
+		height:180px;
+		width:180px;
+	}
+
+	h1 {
+		margin:0 0 5px 0;
+		font-size:20px;
+		color:#456;
+		font-weight:normal;
+	}
+
+	p {
+		font-size:11px;
+		line-height:14px;
+	}
+
+}
+
+#actions {
+	margin:30px 0 10px 0;	
+
+	a {
+		font-size:11px;		
+		cursor:pointer;
+		color:#666;
+	}
+
+	a:hover {
+		text-decoration:underline;
+		color:#000;
+	}
+}
+
+.disabled {
+	visibility:hidden;		
+}
+
+.next {
+	float:right;
+}	
+
+
