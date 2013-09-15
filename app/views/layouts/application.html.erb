@@ -27,7 +27,12 @@
 							<li><a href="#">Stats/Results</a></li>
 							<li><a href="#">Photos</a></li>
 							<li><a href="#">Store</a></li>
-							<%= navbar_link "Tickets", tickets_path %>
+						<% end %>
+
+						<%= navbar_link "Tickets", tickets_path %>
+
+						<% if Rails.env.development? then %>
+
 							<li><a href="#">Rules</a></li>
 							<li><a href="#">Community</a></li>
 							<li><a href="#">More</a></li>
