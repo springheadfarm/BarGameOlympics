@@ -13,7 +13,7 @@
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<%= link_to "BGO", root_path, :class => "navbar-brand" %>
+					<%= link_to "BGO", root_url, :class => "navbar-brand" %>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -25,10 +25,10 @@
 						<% if Rails.env.development? then %>
 
 							<li><a href="#">Stats/Results</a></li>
-							<li><a href="#">Photos</a></li>
 							<li><a href="#">Store</a></li>
 						<% end %>
 
+						<%= navbar_link "Photos", galleries_path %>
 						<%= navbar_link "Tickets", tickets_path %>
 
 						<% if Rails.env.development? then %>

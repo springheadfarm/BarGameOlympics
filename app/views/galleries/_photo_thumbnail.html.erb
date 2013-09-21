@@ -1,0 +1,8 @@
+  <div class="col-md-3">
+    <div class="thumbnail">
+    <%= image_tag @photo.image_url(:fill).to_s, :class => "img-rounded" %>
+      <div class="caption">
+        <h4><%= @photo.name %></h4>
+      </div>
+    </div>
+  </div>

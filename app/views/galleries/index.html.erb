@@ -1,0 +1,18 @@
+<% title "Galleries" %>
+
+<br/>
+
+<table>
+  <tr>
+    <th>Galleries</th>
+  </tr>
+  <% for gallery in @galleries %>
+    <tr>
+      <td>    
+        <%= image_tag gallery.photos.first.image_url(:tiny).to_s, :class => "img-rounded" %>
+        <%= link_to gallery.name, gallery %> (<%= gallery.photos.count %> photos)</td>
+    </tr>
+  <% end %>
+</table>
+
+<br/>

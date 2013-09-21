@@ -1,0 +1,21 @@
+<% title "Gallery" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery.name %>
+</p>
+
+
+<% @gallery.photos.in_groups_of(4,false) do |photos| %>
+
+	<div class="row">
+		<% photos.each do |photo| %>
+			<% @photo = photo %>
+			<%= render 'photo_thumbnail' %>
+		<% end %>
+	</div>
+	<br/>
+
+<% end %>
+
+

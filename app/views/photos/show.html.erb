@@ -1,0 +1,26 @@
+<% title "Photo" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @photo.name %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= @photo.image %>
+</p>
+<p>
+  <strong>Gallery:</strong>
+  <%= @photo.gallery_id %>
+</p>
+
+<%= image_tag @photo.image_url(:medium).to_s, :class => "img-rounded" %>
+<%= image_tag @photo.image_url(:fit).to_s, :class => "img-rounded" %>
+<%= image_tag @photo.image_url(:fill).to_s, :class => "img-rounded" %>
+<%= image_tag @photo.image_url(:limit).to_s, :class => "img-rounded" %>
+<%= image_tag @photo.image_url().to_s, :class => "img-rounded" %>
+
+<p>
+  <%= link_to "Edit", edit_photo_path(@photo) %> |
+  <%= link_to "Destroy", @photo, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", photos_path %>
+</p>
