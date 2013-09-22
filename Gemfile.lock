@@ -208,6 +208,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   fog
   jquery-rails (< 3.0.0)
+  kaminari
   mocha
   nifty-generators
   pg

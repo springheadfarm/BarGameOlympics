@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
-
 gem 'redcarpet'
 
 # following two to support upload and scaling of athlete images
@@ -16,6 +15,8 @@ gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
 # gem 'colorbox-rails'
+
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.

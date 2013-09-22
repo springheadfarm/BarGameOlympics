@@ -5,9 +5,16 @@
   <%= @gallery.name %>
 </p>
 
-
+	<div class="row">
+		<ul class="pager">
+			<li class="previous"><%= link_to_previous_page @photos, '&larr; back'.html_safe %></li>
+			<li class="next"><%= link_to_next_page @photos, 'next &rarr;'.html_safe %></li>
+		</ul>
+		<%= page_entries_info @photos %>
+		<br/><br/>
+	</div>
 <div id="gallery">
-	<% @gallery.photos.in_groups_of(4,false) do |photos| %>
+	<% @photos.in_groups_of(4,false) do |photos| %>
 
 		<div class="row">
 			<% photos.each do |photo| %>
@@ -18,5 +25,7 @@
 		<br/>
 
 	<% end %>
+
+
 </div>
 
