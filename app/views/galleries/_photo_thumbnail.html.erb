@@ -1,6 +1,6 @@
   <div class="col-md-3">
     <div class="thumbnail">
-      <a class="gallery_photo" href="<%= @photo.image_url() %>" title="something">
+      <a class="gallery_photo" href="<%= @photo.image_url() %>" title="<%= @photo.name %>">
         <%= image_tag @photo.image_url(:fill).to_s, :class => "img-rounded" %>
         <div class="caption">
           <h4><%= @photo.name %></h4>
