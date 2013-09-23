@@ -5,6 +5,12 @@ class Photo < ActiveRecord::Base
 
 	mount_uploader :image, ImageUploader
 
+	def self.random
+		if (c=count) != 0
+			find(:first, :offset => rand(c))
+		end
+	end
+
 end
 
 

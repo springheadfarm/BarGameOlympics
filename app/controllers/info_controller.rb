@@ -3,6 +3,7 @@ class InfoController < ApplicationController
   end
 
   def home
+  	@photo = Photo.random
   end
 
   def tickets
