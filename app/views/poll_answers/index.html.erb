@@ -1,0 +1,19 @@
+<% title "Poll Answers" %>
+
+<table>
+  <tr>
+    <th>Poll</th>
+    <th>Answer</th>
+  </tr>
+  <% for poll_answer in @poll_answers %>
+    <tr>
+      <td><%= poll_answer.poll_id %></td>
+      <td><%= poll_answer.answer %></td>
+      <td><%= link_to "Show", poll_answer %></td>
+      <td><%= link_to "Edit", edit_poll_answer_path(poll_answer) %></td>
+      <td><%= link_to "Destroy", poll_answer, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Poll Answer", new_poll_answer_path %></p>

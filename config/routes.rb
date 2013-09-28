@@ -1,4 +1,10 @@
 BarGameOlympics::Application.routes.draw do
+  resources :poll_responses
+
+  resources :poll_answers
+
+  resources :polls
+
   resources :photos
 
   resources :galleries

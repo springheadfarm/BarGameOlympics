@@ -1,0 +1,7 @@
+one:
+  poll_id: 1
+  answer: MyText
+
+two:
+  poll_id: 1
+  answer: MyText

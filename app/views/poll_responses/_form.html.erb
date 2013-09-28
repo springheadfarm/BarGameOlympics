@@ -1,0 +1,12 @@
+<%= form_for @poll_response do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :poll_id %><br />
+    <%= f.number_field :poll_id %>
+  </p>
+  <p>
+    <%= f.label :poll_answer_id %><br />
+    <%= f.number_field :poll_answer_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

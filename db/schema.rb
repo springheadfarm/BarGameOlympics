@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130919215855) do
+ActiveRecord::Schema.define(:version => 20130925232940) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -87,6 +87,26 @@ ActiveRecord::Schema.define(:version => 20130919215855) do
     t.string   "name"
     t.string   "image"
     t.integer  "gallery_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "poll_answers", :force => true do |t|
+    t.integer  "poll_id"
+    t.text     "answer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "poll_responses", :force => true do |t|
+    t.integer  "poll_id"
+    t.integer  "poll_answer_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "polls", :force => true do |t|
+    t.text     "question"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

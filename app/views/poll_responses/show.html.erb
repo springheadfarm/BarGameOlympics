@@ -1,0 +1,16 @@
+<% title "Poll Response" %>
+
+<p>
+  <strong>Poll:</strong>
+  <%= @poll_response.poll_id %>
+</p>
+<p>
+  <strong>Poll Answer:</strong>
+  <%= @poll_response.poll_answer_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_poll_response_path(@poll_response) %> |
+  <%= link_to "Destroy", @poll_response, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", poll_responses_path %>
+</p>

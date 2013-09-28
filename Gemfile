@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 gem 'redcarpet'
+gem 'airbrake'
 
 # following two to support upload and scaling of athlete images
 # will use for picture gallery later
@@ -43,6 +44,9 @@ group :development do
 	gem "nifty-generators"
 	gem "better_errors"
 	gem "binding_of_caller"
+	gem 'hirb'
+	gem 'irbtools', :require => false
+
 end
 
 
