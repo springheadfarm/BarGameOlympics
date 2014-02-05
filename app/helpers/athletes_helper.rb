@@ -9,8 +9,9 @@ module AthletesHelper
 	end
 
 	def age_birthday_display(athlete)
-		if athlete.birthday then
-			((Date.today - athlete.birthday).to_i/365.floor).to_s + " (#{athlete.birthday})"
+		birthday = athlete.birthday
+		if birthday then
+			((Date.today - birthday).to_i/365.floor).to_s + " (#{birthday})"
 		else
 			"Undisclosed"
 		end

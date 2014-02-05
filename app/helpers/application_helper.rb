@@ -23,15 +23,15 @@ module ApplicationHelper
 
 				content_tag(:li, "active", :class => "dropdown-header") +
 
-				Athlete.active.order('last_name, first_name').reduce('') { |c, x| 
-					c << athlete_menu_item(x)
+				Athlete.active.order('last_name, first_name').reduce('') { |c, athlete| 
+					c << athlete_menu_item(athlete)
 				}.html_safe +
 
 				content_tag(:li, nil, :class => "divider")  +
 				content_tag(:li, "inactive", :class => "dropdown-header") +
 
-				Athlete.inactive.order('last_name, first_name').reduce('') { |c, x| 
-					c << athlete_menu_item(x)
+				Athlete.inactive.order('last_name, first_name').reduce('') { |c, athlete| 
+					c << athlete_menu_item(athlete)
 				}.html_safe
 			
 			end
