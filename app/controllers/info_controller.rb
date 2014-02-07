@@ -9,4 +9,7 @@ class InfoController < ApplicationController
   def tickets
   	#render layout: 'blank'
   end
+
+  def groupings8
+  end
 end

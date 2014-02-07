@@ -18,8 +18,7 @@
 
 		<div class="row">
 			<% photos.each do |photo| %>
-				<% @photo = photo %>
-				<%= render 'photo_thumbnail' %>
+				<%= render 'photo_thumbnail', :photo => photo %>
 			<% end %>
 		</div>
 		<br/>

@@ -13,7 +13,7 @@ BarGameOlympics::Application.routes.draw do
 
   resources :athletes
 
-  %w[home about tickets].each do |page|
+  %w[home about tickets groupings8].each do |page|
     get page, controller: 'info', action: page
   end
 
