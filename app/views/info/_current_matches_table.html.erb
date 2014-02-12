@@ -1,0 +1,29 @@
+		<h5>Current Matches</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Event</th>
+					<th>Group</th>
+					<th>Equipment</th>
+					<th>Venue</th>
+					<th></th>
+					<th></th>
+					<th>Elapsed</th>
+				</tr>
+			</thead>
+				<% @matches_in_progress.all.each do |match| %>
+					<tr>
+						<td><%= match.sport.name %></td>
+						<td><%= match.group %></td>
+						<td><%= match.arena.name %></td>
+						<td><%= match.arena.venue.name %></td>
+						<td><%= match.athlete1.full_name %></td>
+						<td><%= match.athlete2.full_name %></td>
+						<td><%= match.elapsed_time_string %></td>
+					</tr>
+				<% end %>
+			<tbody>
+
+			</tbody>
+		</table>

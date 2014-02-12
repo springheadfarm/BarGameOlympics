@@ -1,0 +1,27 @@
+		<h5>Completed Match Details</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Event</th>
+					<th>Group</th>
+					<th>Winner</th>
+					<th>Loser</th>
+					<th>id</th>
+				</tr>
+			</thead>
+				<% @matches_completed.all.each do |match| %>
+					<% winner = Athlete.find(match.winner_id) %>
+					<% loser = Athlete.find(match.loser_id) %>
+					<tr>
+						<td><%= match.sport.name %></td>
+						<td><%= match.group %></td>
+						<td><span class="label label-success"><%= winner.full_name %></span></td>
+						<td><span class="label label-danger"><%= loser.full_name %></span></td>
+						<td><%= match.id %></td>
+					</tr>
+				<% end %>
+			<tbody>
+
+			</tbody>
+		</table>

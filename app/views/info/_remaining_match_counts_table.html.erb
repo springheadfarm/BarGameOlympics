@@ -1,0 +1,28 @@
+		<h5>Remaining matches</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Event</th>
+					<th>Group A</th>
+					<th>Group B</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% Sport.all.each do |sport| %>
+					<tr>
+						<td><%= sport.name %></td>
+						<td><%= sport.matches.unplayed.where(:group => "A").count %></td>
+						<td><%= sport.matches.unplayed.where(:group => "B").count %></td>
+						<td><%= sport.matches.unplayed.count %></td>
+					</tr>
+				<% end %>
+				<tr>
+					<td><b>Total</b></td>
+					<td><%= Match.unplayed.where(:group => "A").count %></td>
+					<td><%= Match.unplayed.where(:group => "B").count %></td>
+					<td><%= @matches_unplayed.count %></td>
+				</tr>
+			</tbody>
+		</table>

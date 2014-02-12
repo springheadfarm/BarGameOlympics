@@ -1,0 +1,34 @@
+		<h5>Remaining Match Details</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Event</th>
+					<th>Group</th>
+					<th></th>
+					<th></th>
+					<th>Possible?</th>
+					<th>id</th>
+				</tr>
+			</thead>
+				<% @matches_unplayed.all.each do |match| %>
+					<% a1 = match.athletes.order(:id).first %>
+					<% a2 = match.athletes.order(:id).last %>
+					<tr>
+						<td><%= match.sport.name %></td>
+						<td><%= match.group %></td>
+						<td><%= a1.full_name %></td>
+						<td><%= a2.full_name %></td>
+						<td>
+							<% if match.possible? %>
+								<span class="label label-success">YES</span>
+							<% else %>
+								<span class="label label-danger">NO</span>
+							<% end %>
+						<td><%= match.id %></td>
+					</tr>
+				<% end %>
+			<tbody>
+
+			</tbody>
+		</table>

@@ -1,0 +1,35 @@
+		<h5>Arena Usage</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Equipment</th>
+					<th>Venue</th>
+					<th>Status</th>
+					<th></th>
+					<th></th>
+					<th>Elapsed</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+				<% Arena.all.each do |arena| %>
+					<tr>
+						<td><%= arena.name %></td>
+						<td><%= arena.venue.name %></td>
+						<td><%= arena.status %></td>
+						<% if arena.in_use? %>
+							<td><%= arena.current_match.athlete1.full_name if arena.in_use? %></td>
+							<td><%= arena.current_match.athlete2.full_name if arena.in_use? %></td>
+							<td><%= arena.current_match.elapsed_time_string if arena.in_use? %></td>
+						<% else %>
+							<td></td>
+							<td></td>
+							<td></td>
+						<% end %>
+						<td><%= action_buttons(arena) %></td>
+					</tr>
+				<% end %>
+			<tbody>
+
+			</tbody>
+		</table>

@@ -1,19 +1,20 @@
 BarGameOlympics::Application.routes.draw do
-  resources :poll_responses
-
-  resources :poll_answers
-
-  resources :polls
 
   resources :photos
-
   resources :galleries
-
   resources :sports
-
   resources :athletes
 
-  %w[home about tickets groupings8].each do |page|
+  resources :matches
+  match 'matches/:match_id/:arena_id/start' => 'matches#start', :as => :start_match
+  match 'matches/:match_id/cancel' => 'matches#cancel', :as => :cancel_match
+  match 'matches/:match_id/record' => 'matches#record', :as => :record_match
+  match 'matches/:match_id/record_winner' => 'matches#record_winner'
+  resources :poll_responses
+  resources :poll_answers
+  resources :polls
+
+  %w[home about tickets groupings8 gdm standings].each do |page|
     get page, controller: 'info', action: page
   end
 
@@ -21,6 +22,9 @@ BarGameOlympics::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

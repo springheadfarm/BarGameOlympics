@@ -7,4 +7,19 @@ module InfoHelper
 	 	end
 	 end
 
+	 def action_buttons(arena)
+	 	if arena.in_use? then
+		 	link_to("record result", record_match_path(arena.current_match.id), {:class => "btn btn-warning btn-xs"}) + "|" +
+		 	link_to("cancel", cancel_match_path(arena.current_match.id), {:class => "btn btn-danger btn-xs"})
+		 else
+		 	#link_to("assign", new_match_path, {:class => "btn btn-primary btn-xs"})
+		 	link_to(
+		 		"assign", 
+		 		{ :controller => 'matches', :action => 'new', :arena_id => "#{arena.id}" } , 
+		 		{ :class => "btn btn-primary btn-xs" }
+		 	)
+		 end
+	 end
+	
+
 end

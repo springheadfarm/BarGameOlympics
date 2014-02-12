@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131216212100) do
+ActiveRecord::Schema.define(:version => 20140210131333) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -46,6 +46,14 @@ ActiveRecord::Schema.define(:version => 20131216212100) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "arenas", :force => true do |t|
+    t.string   "name"
+    t.integer  "venue_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "sport_id"
+  end
+
   create_table "athletes", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -57,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20131216212100) do
     t.float    "weight"
     t.text     "profile"
     t.string   "image"
+    t.string   "username"
   end
 
   create_table "galleries", :force => true do |t|
@@ -74,6 +83,8 @@ ActiveRecord::Schema.define(:version => 20131216212100) do
     t.integer  "loser_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "arena_id"
+    t.string   "group"
   end
 
   add_index "matches", ["sport_id"], :name => "index_matches_on_sport_id"

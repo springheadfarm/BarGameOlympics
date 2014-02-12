@@ -1,0 +1,35 @@
+		<h5>Athletes</h5>
+
+		<table class="table table-condensed table-striped">
+			<thead>
+				<tr>
+					<th>Athlete</th>
+					<th>Status</th>
+					<th>What</th>
+					<th>Where</th>
+					<th>Elapsed</th>
+					<th># Left</th>
+				</tr>
+			</thead>
+				<% @athletes.each do |athlete| %>
+					<% match = athlete.matches.in_progress.first %>
+					<tr>
+						<td><%= athlete.full_name %></td>
+						<td><%= athlete.idle? ? "Idle" : "Playing" %></td>
+
+						<% if athlete.idle? %>
+							<td></td>
+							<td></td>
+							<td></td>
+						<% else %>
+							<td><%= match.sport.name %></td>
+							<td><%= match.arena.name %></td>
+							<td><%= match.elapsed_time_string %></td>
+						<% end %>
+						<td><%= athlete.matches.unplayed.count %></td>
+					</tr>
+				<% end %>
+			<tbody>
+
+			</tbody>
+		</table>

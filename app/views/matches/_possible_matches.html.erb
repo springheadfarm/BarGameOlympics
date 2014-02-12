@@ -1,0 +1,20 @@
+<table class='table'>
+	<thead>
+		<tr>
+			<th>Group</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @possible_matches.each do |match| %>
+			<tr>
+				<td><%= match.group %></td>
+				<td><%= match.athlete1.full_name %></td>
+				<td><%= match.athlete2.full_name %></td>
+				<td><%= link_to "start", start_match_path(match.id, @arena.id), { :class => 'btn btn-success btn-xs' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

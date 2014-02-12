@@ -1,0 +1,14 @@
+<h2>Record Match Result</h2>
+
+<%= form_tag "/matches/#{@match.id}/record_winner" do %>
+	<%= label_tag(:result_string, "Match Results:") %>
+	<%= text_field_tag(:result_string) %>
+
+	<br/><br/>
+
+	<%= submit_tag "#{@match.athlete1.full_name}", class: "btn btn-success" %>
+	<%= submit_tag "#{@match.athlete2.full_name}", class: "btn btn-success" %>
+
+<% end %>
+
+<br/><br/>
