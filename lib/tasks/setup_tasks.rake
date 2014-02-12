@@ -18,6 +18,9 @@ namespace :setup do
 		rows = contents.split(/\n/)
 		rows.each do |row|
 			columns = row.split(/,/)
+			puts "... Processing match"
+			puts "... Athlete 1: #{columns[1]}"
+			puts "... Athlete 2: #{columns[2]}"
 			a1 = Athlete.find_by_username(columns[1])
 			a2 = Athlete.find_by_username(columns[2])
 			sport = Sport.find_by_name(columns[0])
