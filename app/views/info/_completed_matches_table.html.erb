@@ -7,6 +7,7 @@
 					<th>Group</th>
 					<th>Winner</th>
 					<th>Loser</th>
+					<th>Note</th>
 					<th>id</th>
 				</tr>
 			</thead>
@@ -14,10 +15,11 @@
 					<% winner = Athlete.find(match.winner_id) %>
 					<% loser = Athlete.find(match.loser_id) %>
 					<tr>
-						<td><%= match.sport.name %></td>
+						<td><%= match.sport_name %></td>
 						<td><%= match.group %></td>
 						<td><span class="label label-success"><%= winner.full_name %></span></td>
 						<td><span class="label label-danger"><%= loser.full_name %></span></td>
+						<td><%= match.note %></td>
 						<td><%= match.id %></td>
 					</tr>
 				<% end %>

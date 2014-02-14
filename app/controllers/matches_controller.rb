@@ -39,6 +39,7 @@ class MatchesController < ApplicationController
 		match.update_attribute(:ended_at, Time.zone.now)
 		match.update_attribute(:winner_id, winner_athlete.id)
 		match.update_attribute(:loser_id, loser_athlete.id)
+		match.update_attribute(:note,result_string)
 		redirect_to gdm_path
 	end
 end

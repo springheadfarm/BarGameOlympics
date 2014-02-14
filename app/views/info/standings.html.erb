@@ -1,0 +1,31 @@
+<h3>Live Standings</h3>
+
+<table class="table">
+
+	<thead>
+		<tr>
+			<th>Athlete</th>
+			<% Sport.order(:name).each do |sport| %>
+				<th><%= sport.name %></th>
+			<% end %>
+			<th>Total</th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+	<% @standings.athletes_ordered_by(:total).each do |athlete| %>
+
+		<tr>
+			<td><%= athlete.full_name %></td>
+			<% Sport.order(:name).each do |sport| %>
+				<td><%= @standings.points(athlete,sport) %></td>
+			<% end %>
+			<td>0</td>
+		</tr>
+
+	<% end %>
+
+	</tbody>
+
+</table>

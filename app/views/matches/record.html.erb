@@ -1,7 +1,7 @@
 <h2>Record Match Result</h2>
 
 <%= form_tag "/matches/#{@match.id}/record_winner" do %>
-	<%= label_tag(:result_string, "Match Results:") %>
+	<%= label_tag(:result_string, "Match Result Notes : ") %>
 	<%= text_field_tag(:result_string) %>
 
 	<br/><br/>

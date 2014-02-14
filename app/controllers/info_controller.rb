@@ -19,4 +19,9 @@ class InfoController < ApplicationController
     @matches_completed = Match.completed
     @athletes = Athlete.active
   end
+
+  def standings
+    @standings = Standings.new
+    @standings.calculate
+  end
 end

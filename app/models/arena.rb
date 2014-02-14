@@ -2,6 +2,8 @@ class Arena < ActiveRecord::Base
   attr_accessible :name, :venue_id, :sport_id
 
   belongs_to :venue
+    delegate :name, :to => :venue, :prefix => true
+
   belongs_to :sport
   has_many :matches
 

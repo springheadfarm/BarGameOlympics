@@ -14,10 +14,10 @@
 			</thead>
 				<% @matches_in_progress.all.each do |match| %>
 					<tr>
-						<td><%= match.sport.name %></td>
+						<td><%= match.sport_name %></td>
 						<td><%= match.group %></td>
-						<td><%= match.arena.name %></td>
-						<td><%= match.arena.venue.name %></td>
+						<td><%= match.arena_name %></td>
+						<td><%= match.arena.venue_name %></td>
 						<td><%= match.athlete1.full_name %></td>
 						<td><%= match.athlete2.full_name %></td>
 						<td><%= match.elapsed_time_string %></td>

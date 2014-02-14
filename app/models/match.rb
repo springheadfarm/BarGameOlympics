@@ -1,5 +1,5 @@
 class Match < ActiveRecord::Base
-  attr_accessible :ended_at, :loser_id, :sport_id, :started_at, :venue_id, :winner_id, :arena_id, :group
+  attr_accessible :ended_at, :loser_id, :sport_id, :started_at, :venue_id, :winner_id, :arena_id, :group, :note
 
   has_many :participations
   has_many :athletes, :through => :participations
@@ -7,8 +7,12 @@ class Match < ActiveRecord::Base
   accepts_nested_attributes_for :athletes, :participations
 
   belongs_to :venue
+
   belongs_to :arena
+  delegate :name, :to => :arena, :prefix => true
+
   belongs_to :sport
+  delegate :name, :to => :sport, :prefix => true
 
   scope :unplayed, 		-> { where("started_at is NULL") }
   scope :in_progress,	-> { where("started_at is NOT NULL AND ended_at is NULL") }
