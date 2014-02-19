@@ -16,7 +16,7 @@ module InfoHelper
 		 	link_to(
 		 		"assign", 
 		 		{ :controller => 'matches', :action => 'new', :arena_id => "#{arena.id}" } , 
-		 		{ :class => "btn btn-primary btn-xs" }
+		 		{ :class => "btn btn-primary btn-xs assign-button", :data_sport => "#{arena.sport.name}" }
 		 	)
 		 end
 	 end

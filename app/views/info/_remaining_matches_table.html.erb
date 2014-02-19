@@ -14,7 +14,7 @@
 				<% @matches_unplayed.all.each do |match| %>
 					<% a1 = match.athletes.order(:id).first %>
 					<% a2 = match.athletes.order(:id).last %>
-					<tr>
+					<tr data-sport="<%= match.sport.name %>" data-possible="<%= match.possible? %>">
 						<td><%= match.sport.name %></td>
 						<td><%= match.group %></td>
 						<td><%= a1.full_name %></td>

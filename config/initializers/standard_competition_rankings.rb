@@ -61,14 +61,8 @@ class SCR
       @rankings[i] = data
     end
 
-    puts "*** dropped out of main loop... assigning last bucket"
-
     i = @rankings.size
   
-    puts "*** i = #{i}"
-    puts "*** group_points = #{group_points}"
-    puts "*** bucket_count = #{bucket_count}"
-
     (1..bucket_count).each do |n|
       @rankings[i-n][:points] = group_points.to_f / bucket_count
     end

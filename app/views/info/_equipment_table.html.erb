@@ -15,7 +15,7 @@
 				<% Arena.all.each do |arena| %>
 					<tr>
 						<td><%= arena.name %></td>
-						<td><%= arena.venue.name %></td>
+						<td><%= arena.venue_name %></td>
 						<td><%= arena.status %></td>
 						<% if arena.in_use? %>
 							<td><%= arena.current_match.athlete1.full_name if arena.in_use? %></td>

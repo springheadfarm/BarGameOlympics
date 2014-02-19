@@ -15,20 +15,28 @@
                     daysColor    : "#ff6565",
                     daysGlow     : "none",
                     
-                    startDate   : Date.parse("16/Feb/2013 23:00:00")/1000,
-                    endDate     : Date.parse("14/Feb/2014 18:30:00")/1000,
+                    startDate   : Date.parse("15/Feb/2014 23:00:00")/1000,
+                    endDate     : Date.parse("13/Feb/2015 18:30:00")/1000,
                     now         : (new Date) / 1000
                 });
             });
         </script>
 
-<%= render 'countdown_clock' %>
-
-
 <div class="row">
 
-
   <div class="col-md-3">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">SHEPPARD JOKE OF THE DAY</div>
+            <div class="panel-body">
+
+                <p><i>Q: If a reliable Miss BGO and Laura Sheppard fell off a building, who would hit the ground first?</i></p>
+                <p><i>A: The reliable Miss BGO.  Laura Sheppard would have to stop for directions.</i></p>
+
+
+            </div>
+        </div>
+
     <div class="thumbnail">
         <%= image_tag @photo.image_url(:fill).to_s, :class => "img-rounded" %>
         <div class="caption">
@@ -45,26 +53,38 @@
 
 	<div class="col-md-6">
         <div class="panel panel-default">
-        <div class="panel-heading">NEWS</div>
-        <div class="panel-body">
+            <div class="panel-heading">NEWS</div>
+            <div class="panel-body">
 
-            <h3>Miss BGO 2014</h3>
-            <p>
-                We're pleased to introduce Miss BGO 2014 - Laura Sheppard!
-                <br/><br/>
-                <%= image_tag 'laura_sheppard_4_small.jpg', :class=>'img-thumbnail' %>
-                <%= image_tag 'laura_sheppard_2_small.jpg', :class=>'img-thumbnail' %>
-            </p>
+                <h3>It's a wrap!</h3>
+                <p>
+                    BGO 8 is in the books!  After an amazing two days of exciting competition,
+                    perennial contendor Doug Dixon took home the all around gold.  Lots more details
+                    and statistics in to come in the following weeks.  Follow us on Twitter!
+                </p>
+                <p>
+                    The only sour moment of BGO 8 was the last minute no-show of wannabe Miss BGO
+                    Laura Sheppard.  In BGO tradition, to celebrate Laura's no-show, for the next couple
+                    weeks we will be hosting the Laura Sheppard Joke of the Day.  ENJOY!
+                </p>
 
-			<h3>Site Under Construction</h3>
-			<p>
-				Our website is in the middle of a <em>major</em> reconstruction!  During the transition,
-                some items from the old site will be unavailable.  Don't worry, they'll be back soon!
-                In the meantime, make sure to mark your calendars for BGO 8 -- February 14-15, 2014 -- it'll be here before you know it!  Check here often and subscribe to
-				the Twitter feed to stay informed!
-			</p>
+                <h3>Miss BGO 2014</h3>
+                <p>
+                    We're <del>pleased</del> <ins>utterly embarrassed</ins> to introduce <ins>No Show</ins> Miss BGO 2014 - Laura Sheppard!
+                    <br/><br/>
+                    <%= image_tag 'laura_sheppard_4_small.jpg', :class=>'img-thumbnail' %>
+                    <%= image_tag 'laura_sheppard_2_small.jpg', :class=>'img-thumbnail' %>
+                </p>
 
-        </div>
+    			<h3>Site Under Construction</h3>
+    			<p>
+    				Our website is in the middle of a <em>major</em> reconstruction!  During the transition,
+                    some items from the old site will be unavailable.  Don't worry, they'll be back soon!
+                    In the meantime, make sure to mark your calendars for BGO 9 -- February 13-14, 2015 -- it'll be here before you know it!  Check here often and subscribe to
+    				the Twitter feed to stay informed!
+    			</p>
+
+            </div>
         </div>
     </div>
 
@@ -74,3 +94,7 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
 </div>
+
+<%= render 'countdown_clock' %>
+
+

@@ -18,6 +18,12 @@ BarGameOlympics::Application.routes.draw do
     get page, controller: 'info', action: page
   end
 
+  %w[timing].each do |page|
+    get "stats/#{page}", controller: 'stats', action: page
+  end
+
+
+
   root :to => 'info#home'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

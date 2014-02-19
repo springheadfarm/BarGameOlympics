@@ -8,7 +8,7 @@ class Arena < ActiveRecord::Base
   has_many :matches
 
   def status
-  	self.matches.in_progress ? "In use" : "Available"	
+  	self.in_use? ? "In use" : "Available"	
   end
 
   def in_use?
