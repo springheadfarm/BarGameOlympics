@@ -5,4 +5,8 @@ class StatsController < ApplicationController
     @elapsed_by_athlete = Match.joins(:athletes).select("athlete_id, avg(ended_at - started_at) as elapsed").group("athlete_id").order(:elapsed).reverse_order
   end
 
+  def medals
+    @athletes = Athlete.all
+  end
+
 end

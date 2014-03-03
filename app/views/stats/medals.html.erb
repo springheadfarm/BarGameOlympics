@@ -1,0 +1,41 @@
+<% title('Career Medal Statistics : BGO') %>
+<% javascript('tablesorter/jquery.tablesorter.min.js') %>
+<% javascript('tablesorter/jquery.tablesorter.widgets.min.js') %>
+<% stylesheet('tablesorter/theme.ice.css') %>
+
+<div class="row">
+	<div class="col-md-9">
+		<h4>Career Medals by Sport</h4>
+		<table class="table table-condensed" id="medals-by-sport">
+
+			<thead>
+				<tr>
+					<td></td>
+					<th colspan="6">Sport</th>
+				</tr>
+				<tr>
+					<th>Athlete</th>
+					<% Sport.order(:name).each do |s| %><th><%= s.name %></th><% end %>
+					<th>Total</th>
+				</tr>
+			</thead>
+
+			<tbody>	
+
+				<% @athletes.each do |athlete| %>
+
+					<tr>
+						<td><%= athlete.full_name %></td>
+						<% Sport.order(:name).each do |s| %><td class="text-right"><%= athlete.medals.in_sport(s).count %></td><% end %>
+						<td class="text-right"><%= athlete.medals.count %></td>
+					</tr>
+
+				<% end %>
+
+			</tbody>
+
+		</table>
+
+	</div>
+</div>
+

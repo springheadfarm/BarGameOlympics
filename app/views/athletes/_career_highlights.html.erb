@@ -4,8 +4,9 @@
 	</div>
 	<div class="panel-body">
 		<ul>
-			<li>Great win</li>
-			<li>And another</li>
+			<% @athlete.medals.each do |medal| %>
+				<li><small><%= medal.event.name %> <%= medal.sport.name %> <%= medal.color %></small></li>
+			<% end %>
 		</ul>
 	</div>
 </div>

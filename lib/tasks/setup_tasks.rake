@@ -7,6 +7,41 @@ namespace :setup do
 		end
 	end
 
+	task :clear_medals => :environment do
+		puts "Clearing medal table"
+		Medal.delete_all
+		puts "Done."
+	end
+
+	desc "Build medals table from medals.csv"
+	task :populate_medals => :environment do
+		puts "Populating medals table"
+		contents = File.read('public/medals.csv')
+		rows = contents.split(/\n/)
+		puts "Found #{rows.size}"
+		rows.each do |row|
+			columns = row.split(/,/)
+			athlete = Athlete.find_by_username(columns[4])
+			event = Event.find_by_name(columns[2])
+			puts "... Processing medal"
+			puts "... medal: #{columns[1]}"
+			puts "... event: #{columns[2]}"
+			puts "... event: #{event.name}"
+			puts "... sport: #{columns[3]}"
+			puts "... athlete: :#{athlete.full_name}:"
+			sport = Sport.find_by_name(columns[3])
+			medal = Medal.new
+			medal.sport = sport
+			medal.athlete = athlete
+			medal.color = columns[1]
+			medal.event = event
+			medal.save
+		end
+
+		puts "Done."
+
+	end
+
 	task :populate_matches => :environment do
 		
 		puts "Removing old matches"

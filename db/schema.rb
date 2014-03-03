@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140212230044) do
+ActiveRecord::Schema.define(:version => 20140303231016) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -68,6 +68,13 @@ ActiveRecord::Schema.define(:version => 20140212230044) do
     t.string   "username"
   end
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "galleries", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -90,6 +97,19 @@ ActiveRecord::Schema.define(:version => 20140212230044) do
 
   add_index "matches", ["sport_id"], :name => "index_matches_on_sport_id"
   add_index "matches", ["venue_id"], :name => "index_matches_on_venue_id"
+
+  create_table "medals", :force => true do |t|
+    t.string   "color"
+    t.integer  "event_id"
+    t.integer  "athlete_id"
+    t.integer  "sport_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "medals", ["athlete_id"], :name => "index_medals_on_athlete_id"
+  add_index "medals", ["event_id"], :name => "index_medals_on_event_id"
+  add_index "medals", ["sport_id"], :name => "index_medals_on_sport_id"
 
   create_table "participations", :force => true do |t|
     t.integer  "athlete_id"

@@ -18,7 +18,7 @@ BarGameOlympics::Application.routes.draw do
     get page, controller: 'info', action: page
   end
 
-  %w[timing].each do |page|
+  %w[timing medals].each do |page|
     get "stats/#{page}", controller: 'stats', action: page
   end
 
