@@ -20,15 +20,16 @@
 
 						<%= athlete_menu %>
 
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Stats/Results<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><%= link_to "Medals", stats_medals_path %></li>
+							</ul>
+						</li>
+
 						<!-- For now these items are hidden in production -->
 
 						<% if Rails.env.development? then %>
 
-							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Stats/Results<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><%= link_to "Medals", stats_medals_path %></li>
-								</ul>
-							</li>
 							<li><a href="#">Store</a></li>
 						<% end %>
 
