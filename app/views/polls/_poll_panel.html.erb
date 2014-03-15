@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			Q: <%= poll.question %>
+		</h3>
+	</div>
+
+	<div class="panel-body poll-question" data-poll-id="<%= poll.id %>">
+
+		<form role="form" id="poll_form">
+
+			<% poll.poll_answers.order(:id).each do |pa| %>
+
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="poll_answer" id="optionsRadios1" value="<%= pa.id %>" checked>
+				    <%= pa.answer %>
+				  </label>
+				</div>
+
+
+			<% end %>
+
+			<button type="submit" class="btn btn-primary btn-xs poll-submit">Submit</button>
+
+		</form>
+
+	</div>
+
+	<div class="poll-results-body">
+		</div>
+
+</div>

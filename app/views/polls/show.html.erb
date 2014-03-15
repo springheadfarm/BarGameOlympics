@@ -1,12 +1,15 @@
 <% title "Poll" %>
 
-<p>
-  <strong>Question:</strong>
-  <%= @poll.question %>
-</p>
 
-<p>
-  <%= link_to "Edit", edit_poll_path(@poll) %> |
-  <%= link_to "Destroy", @poll, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", polls_path %>
-</p>
+<div class="row">
+
+	<div class="col-md-2">
+		<%= render 'poll_panel' %>
+
+		<p>
+		  <%= link_to "Edit", edit_poll_path(@poll) %> |
+		  <%= link_to "Destroy", @poll, :confirm => 'Are you sure?', :method => :delete %> |
+		  <%= link_to "View All", polls_path %>
+		</p>
+</div>
+</div>
