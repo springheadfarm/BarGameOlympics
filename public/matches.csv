@@ -1,100 +1,150 @@
-Darts,mradtke,ddixon,A
-Darts,mradtke,rlouka,A
-Darts,mradtke,jdixon,A
-Darts,mradtke,jpearson,A
-Darts,ddixon,rlouka,A
-Darts,ddixon,jdixon,A
-Darts,ddixon,jpearson,A
-Darts,rlouka,jdixon,A
-Darts,rlouka,jpearson,A
-Darts,jdixon,jpearson,A
-Darts,ktornetta,grogers,B
-Darts,ktornetta,dmurphy,B
-Darts,ktornetta,lbench,B
-Darts,ktornetta,jbeltran,B
-Darts,grogers,dmurphy,B
-Darts,grogers,lbench,B
-Darts,grogers,jbeltran,B
-Darts,dmurphy,lbench,B
-Darts,dmurphy,jbeltran,B
-Darts,lbench,jbeltran,B
+Darts,ddixon,dmurphy,A
+Darts,ddixon,lbench,A
+Darts,ddixon,ktornetta,A
+Darts,ddixon,grogers,A
+Darts,ddixon,jbeltran,A
+Darts,dmurphy,lbench,A
+Darts,dmurphy,ktornetta,A
+Darts,dmurphy,grogers,A
+Darts,dmurphy,jbeltran,A
+Darts,lbench,ktornetta,A
+Darts,lbench,grogers,A
+Darts,lbench,jbeltran,A
+Darts,ktornetta,grogers,A
+Darts,ktornetta,jbeltran,A
+Darts,grogers,jbeltran,A
+Darts,mradtke,swible,B
+Darts,mradtke,cweaver,B
+Darts,mradtke,jdixon,B
+Darts,mradtke,rlouka,B
+Darts,mradtke,jpearson,B
+Darts,swible,cweaver,B
+Darts,swible,jdixon,B
+Darts,swible,rlouka,B
+Darts,swible,jpearson,B
+Darts,cweaver,jdixon,B
+Darts,cweaver,rlouka,B
+Darts,cweaver,jpearson,B
+Darts,jdixon,rlouka,B
+Darts,jdixon,jpearson,B
+Darts,rlouka,jpearson,B
 Foosball,grogers,mradtke,A
 Foosball,grogers,ddixon,A
-Foosball,grogers,lbench,A
+Foosball,grogers,jpearson,A
+Foosball,grogers,swible,A
 Foosball,grogers,ktornetta,A
 Foosball,mradtke,ddixon,A
-Foosball,mradtke,lbench,A
+Foosball,mradtke,jpearson,A
+Foosball,mradtke,swible,A
 Foosball,mradtke,ktornetta,A
-Foosball,ddixon,lbench,A
+Foosball,ddixon,jpearson,A
+Foosball,ddixon,swible,A
 Foosball,ddixon,ktornetta,A
-Foosball,lbench,ktornetta,A
+Foosball,jpearson,swible,A
+Foosball,jpearson,ktornetta,A
+Foosball,swible,ktornetta,A
 Foosball,rlouka,jdixon,B
-Foosball,rlouka,jpearson,B
 Foosball,rlouka,dmurphy,B
+Foosball,rlouka,cweaver,B
+Foosball,rlouka,lbench,B
 Foosball,rlouka,jbeltran,B
-Foosball,jdixon,jpearson,B
 Foosball,jdixon,dmurphy,B
+Foosball,jdixon,cweaver,B
+Foosball,jdixon,lbench,B
 Foosball,jdixon,jbeltran,B
-Foosball,jpearson,dmurphy,B
-Foosball,jpearson,jbeltran,B
+Foosball,dmurphy,cweaver,B
+Foosball,dmurphy,lbench,B
 Foosball,dmurphy,jbeltran,B
-Shuffleboard,jdixon,ddixon,A
-Shuffleboard,jdixon,grogers,A
-Shuffleboard,jdixon,lbench,A
-Shuffleboard,jdixon,jpearson,A
-Shuffleboard,ddixon,grogers,A
-Shuffleboard,ddixon,lbench,A
-Shuffleboard,ddixon,jpearson,A
-Shuffleboard,grogers,lbench,A
-Shuffleboard,grogers,jpearson,A
-Shuffleboard,lbench,jpearson,A
-Shuffleboard,dmurphy,rlouka,B
-Shuffleboard,dmurphy,mradtke,B
-Shuffleboard,dmurphy,ktornetta,B
-Shuffleboard,dmurphy,jbeltran,B
-Shuffleboard,rlouka,mradtke,B
-Shuffleboard,rlouka,ktornetta,B
-Shuffleboard,rlouka,jbeltran,B
-Shuffleboard,mradtke,ktornetta,B
-Shuffleboard,mradtke,jbeltran,B
-Shuffleboard,ktornetta,jbeltran,B
-Pool,dmurphy,ktornetta,A
-Pool,dmurphy,mradtke,A
-Pool,dmurphy,rlouka,A
-Pool,dmurphy,jpearson,A
-Pool,ktornetta,mradtke,A
-Pool,ktornetta,rlouka,A
-Pool,ktornetta,jpearson,A
-Pool,mradtke,rlouka,A
-Pool,mradtke,jpearson,A
-Pool,rlouka,jpearson,A
-Pool,ddixon,grogers,B
-Pool,ddixon,lbench,B
-Pool,ddixon,jdixon,B
-Pool,ddixon,jbeltran,B
-Pool,grogers,lbench,B
-Pool,grogers,jdixon,B
-Pool,grogers,jbeltran,B
-Pool,lbench,jdixon,B
-Pool,lbench,jbeltran,B
-Pool,jdixon,jbeltran,B
-Ping Pong,grogers,dmurphy,A
-Ping Pong,grogers,jdixon,A
-Ping Pong,grogers,mradtke,A
-Ping Pong,grogers,jpearson,A
-Ping Pong,dmurphy,jdixon,A
+Foosball,cweaver,lbench,B
+Foosball,cweaver,jbeltran,B
+Foosball,lbench,jbeltran,B
+Ping Pong,ddixon,swible,A
+Ping Pong,ddixon,dmurphy,A
+Ping Pong,ddixon,mradtke,A
+Ping Pong,ddixon,jdixon,A
+Ping Pong,ddixon,jpearson,A
+Ping Pong,swible,dmurphy,A
+Ping Pong,swible,mradtke,A
+Ping Pong,swible,jdixon,A
+Ping Pong,swible,jpearson,A
 Ping Pong,dmurphy,mradtke,A
+Ping Pong,dmurphy,jdixon,A
 Ping Pong,dmurphy,jpearson,A
-Ping Pong,jdixon,mradtke,A
-Ping Pong,jdixon,jpearson,A
+Ping Pong,mradtke,jdixon,A
 Ping Pong,mradtke,jpearson,A
-Ping Pong,rlouka,ddixon,B
-Ping Pong,rlouka,ktornetta,B
+Ping Pong,jdixon,jpearson,A
+Ping Pong,rlouka,grogers,B
+Ping Pong,rlouka,cweaver,B
 Ping Pong,rlouka,lbench,B
 Ping Pong,rlouka,jbeltran,B
-Ping Pong,ddixon,ktornetta,B
-Ping Pong,ddixon,lbench,B
-Ping Pong,ddixon,jbeltran,B
-Ping Pong,ktornetta,lbench,B
-Ping Pong,ktornetta,jbeltran,B
+Ping Pong,rlouka,ktornetta,B
+Ping Pong,grogers,cweaver,B
+Ping Pong,grogers,lbench,B
+Ping Pong,grogers,jbeltran,B
+Ping Pong,grogers,ktornetta,B
+Ping Pong,cweaver,lbench,B
+Ping Pong,cweaver,jbeltran,B
+Ping Pong,cweaver,ktornetta,B
 Ping Pong,lbench,jbeltran,B
+Ping Pong,lbench,ktornetta,B
+Ping Pong,jbeltran,ktornetta,B
+Pool,dmurphy,cweaver,A
+Pool,dmurphy,grogers,A
+Pool,dmurphy,swible,A
+Pool,dmurphy,ktornetta,A
+Pool,dmurphy,jbeltran,A
+Pool,cweaver,grogers,A
+Pool,cweaver,swible,A
+Pool,cweaver,ktornetta,A
+Pool,cweaver,jbeltran,A
+Pool,grogers,swible,A
+Pool,grogers,ktornetta,A
+Pool,grogers,jbeltran,A
+Pool,swible,ktornetta,A
+Pool,swible,jbeltran,A
+Pool,ktornetta,jbeltran,A
+Pool,ddixon,mradtke,B
+Pool,ddixon,jdixon,B
+Pool,ddixon,lbench,B
+Pool,ddixon,rlouka,B
+Pool,ddixon,jpearson,B
+Pool,mradtke,jdixon,B
+Pool,mradtke,lbench,B
+Pool,mradtke,rlouka,B
+Pool,mradtke,jpearson,B
+Pool,jdixon,lbench,B
+Pool,jdixon,rlouka,B
+Pool,jdixon,jpearson,B
+Pool,lbench,rlouka,B
+Pool,lbench,jpearson,B
+Pool,rlouka,jpearson,B
+Shuffleboard,dmurphy,grogers,A
+Shuffleboard,dmurphy,swible,A
+Shuffleboard,dmurphy,jbeltran,A
+Shuffleboard,dmurphy,cweaver,A
+Shuffleboard,dmurphy,ktornetta,A
+Shuffleboard,grogers,swible,A
+Shuffleboard,grogers,jbeltran,A
+Shuffleboard,grogers,cweaver,A
+Shuffleboard,grogers,ktornetta,A
+Shuffleboard,swible,jbeltran,A
+Shuffleboard,swible,cweaver,A
+Shuffleboard,swible,ktornetta,A
+Shuffleboard,jbeltran,cweaver,A
+Shuffleboard,jbeltran,ktornetta,A
+Shuffleboard,cweaver,ktornetta,A
+Shuffleboard,rlouka,lbench,B
+Shuffleboard,rlouka,ddixon,B
+Shuffleboard,rlouka,jpearson,B
+Shuffleboard,rlouka,mradtke,B
+Shuffleboard,rlouka,jdixon,B
+Shuffleboard,lbench,ddixon,B
+Shuffleboard,lbench,jpearson,B
+Shuffleboard,lbench,mradtke,B
+Shuffleboard,lbench,jdixon,B
+Shuffleboard,ddixon,jpearson,B
+Shuffleboard,ddixon,mradtke,B
+Shuffleboard,ddixon,jdixon,B
+Shuffleboard,jpearson,mradtke,B
+Shuffleboard,jpearson,jdixon,B
+Shuffleboard,mradtke,jdixon,B

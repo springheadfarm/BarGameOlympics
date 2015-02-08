@@ -4,7 +4,7 @@ class Sport < ActiveRecord::Base
   has_many :matches
 
   has_many :medals
-  
+
   accepts_nested_attributes_for :matches
 
   @@sports = Hash.new
