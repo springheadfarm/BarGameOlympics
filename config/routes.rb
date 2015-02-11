@@ -14,7 +14,7 @@ BarGameOlympics::Application.routes.draw do
   resources :poll_answers
   resources :polls
 
-  %w[home about tickets groupings8 gdm standings].each do |page|
+  %w[home about tickets groupings8 gdm standings rules_darts rules_shuffleboard rules_ping_pong rules_golden_tee rules_foosball rules_pool].each do |page|
     get page, controller: 'info', action: page
   end
 

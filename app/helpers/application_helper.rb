@@ -1,6 +1,9 @@
 module ApplicationHelper
 
-
+	def title(page_title)
+	  content_for :title, page_title.to_s
+	end
+	
 	def navbar_link(text, link)
 		content_tag(:li) do
 			content_tag(:a, text, :href => link)
