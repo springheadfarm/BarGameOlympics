@@ -10,7 +10,7 @@ class SCR
   def initialize(data, options = {})
     @data = data
     @options = options.reverse_merge(:rank_by => Sport.find(1) , :sort_direction => :desc)
-    @rank_points = [12, 10, 8, 6, 5, 4, 3, 2, 1, 0]
+    @rank_points = [14, 12, 10, 8, 7, 6, 5, 4, 3, 2, 1, 0]
   end
  
   def sort_data!
