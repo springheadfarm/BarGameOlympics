@@ -16,12 +16,16 @@
 
 	<% @standings.athletes_ordered_by(:total).each do |athlete| %>
 
+		<% total_points = 0 %>
+
 		<tr>
 			<td><%= athlete.full_name %></td>
 			<% Sport.order(:name).each do |sport| %>
-				<td><%= @standings.points(athlete,sport) %></td>
+				<% event_points = @standings.points(athlete,sport) %>
+				<% total_points = total_points + event_points %>
+				<td><%= event_points %></td>
 			<% end %>
-			<td>0</td>
+			<td><%= total_points %></td>
 		</tr>
 
 	<% end %>
