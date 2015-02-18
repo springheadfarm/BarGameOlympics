@@ -1,5 +1,7 @@
 BarGameOlympics::Application.routes.draw do
 
+  resources :articles
+
   resources :photos
   resources :galleries
   resources :sports
@@ -18,7 +20,7 @@ BarGameOlympics::Application.routes.draw do
     get page, controller: 'info', action: page
   end
 
-  %w[timing medals].each do |page|
+  %w[timing medals medals_heatmap].each do |page|
     get "stats/#{page}", controller: 'stats', action: page
   end
 

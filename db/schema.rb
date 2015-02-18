@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150207235455) do
+ActiveRecord::Schema.define(:version => 20150218164350) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -56,6 +56,15 @@ ActiveRecord::Schema.define(:version => 20150207235455) do
 
   add_index "arenas", ["sport_id"], :name => "index_arenas_on_sport_id"
   add_index "arenas", ["venue_id"], :name => "index_arenas_on_venue_id"
+
+  create_table "articles", :force => true do |t|
+    t.string   "author"
+    t.text     "markdown"
+    t.datetime "written_at"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "athletes", :force => true do |t|
     t.string   "first_name"

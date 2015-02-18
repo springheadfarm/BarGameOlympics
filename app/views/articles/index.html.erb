@@ -1,0 +1,20 @@
+<% title "Articles" %>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Markdown</th>
+    <th>Written At</th>
+    <th>Title</th>
+  </tr>
+  <% for article in @articles %>
+    <tr>
+      <td><%= article.author %></td>
+      <td><%= article.markdown %></td>
+      <td><%= article.written_at %></td>
+      <td><%= article.title %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Article", new_article_path %></p>

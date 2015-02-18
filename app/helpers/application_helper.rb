@@ -1,3 +1,5 @@
+require 'redcarpet/render_strip'
+
 module ApplicationHelper
 
 	def title(page_title)
@@ -48,6 +50,10 @@ module ApplicationHelper
 		@markdown.render(text).html_safe
 	end
 
+	def stripdown(text)
+		@stripdown ||= Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+		@stripdown.render(text)
+	end
 
 
 end

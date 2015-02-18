@@ -1,0 +1,11 @@
+one:
+  author: MyString
+  markdown: MyText
+  written_at: 2015-02-18 11:43:50
+  title: MyString
+
+two:
+  author: MyString
+  markdown: MyText
+  written_at: 2015-02-18 11:43:50
+  title: MyString

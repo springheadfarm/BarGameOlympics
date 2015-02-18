@@ -9,4 +9,8 @@ class StatsController < ApplicationController
     @athletes = Athlete.all
   end
 
+  def medals_heatmap
+  	
+  end
+
 end

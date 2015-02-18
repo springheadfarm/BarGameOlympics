@@ -15,3 +15,8 @@
 //= require_tree .
 //= require twitter/bootstrap/dropdown
 //= require jquery.colorbox.js
+
+//= require highcharts/highcharts
+//= require highcharts/highcharts-more
+//= require highcharts/modules/heatmap
+//= require highcharts/modules/treemap
