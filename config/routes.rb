@@ -1,5 +1,7 @@
 BarGameOlympics::Application.routes.draw do
 
+  get "medals/heatmap_data"
+
   resources :articles
 
   resources :photos
