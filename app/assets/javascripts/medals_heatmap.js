@@ -121,7 +121,6 @@ if($('#heatmap_container').length)
 			c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
 			rgb += ("00"+c).substr(c.length);
 		}
-		alert(rgb);
 		return rgb;
 	}
 
