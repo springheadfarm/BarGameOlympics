@@ -154,22 +154,26 @@ if($('#heatmap_container').length)
 					name: sport,
 					parent: athlete_p.id,
 					color: color			};
-				points.push(sport_p);
+				sport_val = 0;
 				medal_i = 0;
 				for (var medal in data[athlete][sport]) {
 					medal_p = {
 						id: sport_p.id + "_" + medal_i,
-						name: medal,
+						name: medal + " (" + data[athlete][sport][medal] + ")",
 						parent: sport_p.id,
 						value: data[athlete][sport][medal]
 					};
 					athlete_val += medal_p.value;
+					sport_val += medal_p.value;
 					points.push(medal_p);
 					medal_i++;
 				}
 				sport_i++;
+				sport_p.name += " (" + sport_val + ")";
+				points.push(sport_p);
 			}
 			athlete_p.value = athlete_val;
+			athlete_p.name += " (" + athlete_val + ")"
 			points.push(athlete_p);
 			athlete_i++;
 		}
@@ -186,6 +190,9 @@ if($('#heatmap_container').length)
 				events: {
 	                load: request_heatmap_data()
 	            }
+			},
+			tooltip: {
+				enabled: false
 			},
 			series: [{
 				type: "treemap",
