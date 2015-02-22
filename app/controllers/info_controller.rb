@@ -4,6 +4,7 @@ class InfoController < ApplicationController
 
   def home
   	@photo = Photo.random
+    @news = Article.last(5)
   end
 
   def tickets

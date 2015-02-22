@@ -47,6 +47,7 @@ group :development do
 	gem "binding_of_caller"
 	gem 'hirb'
 	gem 'irbtools', :require => false
+	gem 'meta_request'
 end
 
 
