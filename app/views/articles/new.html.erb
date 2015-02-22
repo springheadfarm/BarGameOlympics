@@ -2,23 +2,23 @@
 
 <%= form_for @article do |f| %>
   <%= f.error_messages %>
-  <p>
+  <div class='form-group'>
+    <%= f.label :title %><br />
+    <%= f.text_field :title , :class => 'form-control'%>
+  </div>
+  <div class='form-group'>
     <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </p>
-  <p>
+    <%= f.text_field :author, :class => 'form-control' %>
+  </div>
+  <div class='form-group'>
     <%= f.label :markdown %><br />
-    <%= f.text_area :markdown %>
-  </p>
-  <p>
+    <%= f.text_area :markdown, :class => 'form-control' %>
+  </div>
+  <div class='form-group'>
     <%= f.label :written_at %><br />
     <%= f.datetime_select :written_at %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p><%= f.submit %></p>
+  </div>
+  <p><%= f.submit 'Update', :class => 'btn btn-primary' %></p>
 <% end %>
 
 

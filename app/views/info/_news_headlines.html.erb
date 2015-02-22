@@ -1,7 +1,7 @@
 <% @news.each do |article| %>
 
 <div class="news_teaser">
-	<h5><%= article.title %></h5>
+	<h4><%= article.title %></h4>
 	<%= stripdown(article.markdown).split.first(20).join(' ') %>... <%= link_to 'more', article %>
 </div>
 
