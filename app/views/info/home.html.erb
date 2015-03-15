@@ -2,28 +2,6 @@
 
 <%= javascript_include_tag 'jbclock' %>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                JBCountDown({
-                    secondsColor : "#ffdc50",
-                    secondsGlow  : "none",
-
-                    minutesColor : "#9cdb7d",
-                    minutesGlow  : "none",
-                    
-                    hoursColor   : "#378cff",
-                    hoursGlow    : "none",
-                    
-                    daysColor    : "#ff6565",
-                    daysGlow     : "none",
-                    
-                    startDate   : Date.parse("14/Feb/2015 23:00:00")/1000,
-                    endDate     : Date.parse("15/Feb/2016 18:00:00")/1000,
-                    now         : (new Date) / 1000
-                });
-            });
-        </script>
-
 <div class="row">
 
   <div class="col-md-3">
@@ -58,6 +36,9 @@
 
             </div>
         </div>
+        <br/>
+        <h4>BGO X is just around the corner...</h4>
+        <%= render 'countdown_clock' %>
     </div>
 
 
@@ -68,6 +49,5 @@
 	</div>
 </div>
 
-<%= render 'countdown_clock' %>
 
 
