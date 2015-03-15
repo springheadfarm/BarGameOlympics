@@ -12,7 +12,7 @@ BarGameOlympics::Application.configure do
   config.serve_static_files = false
 
   config.eager_load = true
-
+  config.log_level = :info
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
