@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-//= require twitter/bootstrap/dropdown
+
+//= require bootstrap-sprockets
 //= require jquery.colorbox.js
 
 //= require highcharts/highcharts

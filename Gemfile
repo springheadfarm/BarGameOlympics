@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '~> 4.2.0'
+gem 'protected_attributes'
+gem 'responders', '~> 2.0'
 
 gem 'pg'
 
@@ -19,27 +18,16 @@ gem 'rmagick'
 
 gem 'kaminari'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 #gem 'jquery-rails', '< 3.0.0'
 gem 'jquery-rails'
 
-gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
+gem 'bootstrap-sass'
 
-
-group :production do
-	gem "rails_12factor"
-end
+gem 'rails_12factor', group: :production
 
 group :development do
 	gem "nifty-generators"
@@ -48,25 +36,10 @@ group :development do
 	gem 'hirb'
 	gem 'irbtools', :require => false
 	gem 'meta_request'
+	gem 'web-console', '~> 2.0'
 end
 
-
-
-gem "activeadmin", github: "gregbell/active_admin"
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 gem "mocha", :group => :test
