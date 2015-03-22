@@ -2,7 +2,6 @@
 @import "bootstrap";
 
 @import "info" ;
-@import "colorbox" ;
 @import "flipclock" ;
 
 body {
@@ -10,6 +9,8 @@ body {
   padding-top: 70px;
 }
 
+
+.galleria{ width: 100%; height: 550px; background: #000 }
 
 
 .wrapper {

@@ -1,7 +1,8 @@
 
 # only setup fog in production
-if Rails.env.production? then
+#if Rails.env.production? then
 
+if true then
   CarrierWave.configure do |config|
     config.fog_credentials = {
       :provider               => 'AWS',                        # required

@@ -12,10 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require bootstrap-sprockets
-//= require jquery.colorbox.js
-
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/modules/heatmap

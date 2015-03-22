@@ -2,17 +2,20 @@
 
 <br/>
 
-<table>
-  <tr>
-    <th>Galleries</th>
-  </tr>
-  <% for gallery in @galleries %>
-    <tr>
-      <td>    
-        <%= image_tag gallery.photos.first.image_url(:tiny).to_s, :class => "img-rounded" %>
-        <%= link_to gallery.name, gallery %> (<%= gallery.photos.count %> photos)</td>
-    </tr>
+<div class='row'>
+
+  <% @galleries.in_groups_of(4,false) do |galleries| %>
+    <% galleries.each do |gallery| %>
+      <div class='col-md-3'>
+          <%= link_to image_tag(gallery.photos.first.image_url(:fill).to_s, :class => "img-rounded"), gallery %>
+          <p>
+            <%= link_to gallery.name, gallery %> (<%= gallery.photos.count %> photos)
+          </p>
+      </div>
+    <% end %>
+    <br/><br/>
   <% end %>
-</table>
+
+</div>
 
 <br/>

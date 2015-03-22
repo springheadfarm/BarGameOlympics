@@ -1,30 +1,42 @@
+<%= javascript_include_tag 'galleries' %>
+<%= javascript_include_tag 'galleria-1.4.2' %>
+
 <% title "Gallery" %>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Gallery Name:</strong>
   <%= @gallery.name %>
 </p>
 
-	<div class="row">
-		<ul class="pager">
-			<li class="previous"><%= link_to_previous_page @photos, '&larr; back'.html_safe %></li>
-			<li class="next"><%= link_to_next_page @photos, 'next &rarr;'.html_safe %></li>
-		</ul>
-		<%= page_entries_info @photos %>
-		<br/><br/>
-	</div>
-<div id="gallery">
-	<% @photos.in_groups_of(4,false) do |photos| %>
 
-		<div class="row">
-			<% photos.each do |photo| %>
-				<%= render 'photo_thumbnail', :photo => photo %>
-			<% end %>
-		</div>
-		<br/>
-
-	<% end %>
-
-
+<div class="galleria">
 </div>
 
+
+
+
+<script>
+
+	var galleria_data = [
+
+		<% @photos.each do |photo| %>
+
+			{
+				image: '<%= raw photo.image_url.to_s %>',
+				title: '<%= photo.name %>'			
+			} <%= "," unless photo == @photos.last %>
+
+		<% end %>
+
+	]
+
+	Galleria.loadTheme("<%= javascript_path('galleria/themes/twelve/galleria.twelve.min.js') %>");
+	Galleria.run('.galleria', {
+		dataSource: galleria_data,
+		imageCrop: false,
+		transition: 'fade',
+		fullscreenCrop: false,
+		fullscreenTransition: 'fade'
+	});
+
+</script>
