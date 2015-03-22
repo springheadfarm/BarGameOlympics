@@ -4,13 +4,19 @@
 @import "info" ;
 @import "flipclock" ;
 
+@import "galleria.twelve" ;
+
 body {
   min-height: 2000px;
   padding-top: 70px;
 }
 
 
-.galleria{ width: 100%; height: 550px; background: #000 }
+.galleria { 
+    width: 100%; 
+    height: 550px; 
+    background: #000 
+}
 
 
 .wrapper {

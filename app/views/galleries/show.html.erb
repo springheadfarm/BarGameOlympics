@@ -1,6 +1,5 @@
-<%= javascript_include_tag 'galleries' %>
-<%= javascript_include_tag 'galleria-1.4.2.min' %>
-<%= stylesheet_link_tag 'galleria.twelve.css' %>
+<%= javascript_include_tag 'galleria-1.4.2' %>
+<%= javascript_include_tag 'galleria.twelve.min' %>
 
 <% title "Gallery" %>
 
@@ -9,10 +8,8 @@
   <%= @gallery.name %>
 </p>
 
-
 <div class="galleria">
 </div>
-
 
 <script>
 
@@ -29,9 +26,10 @@
 
 	]
 
-	Galleria.loadTheme("<%= javascript_path('galleria/themes/twelve/galleria.twelve.min.js') %>");
 	Galleria.run('.galleria', {
 		dataSource: galleria_data,
+		height: '550px',
+		theme: 'twelve',
 		imageCrop: false,
 		transition: 'fade',
 		fullscreenCrop: false,
