@@ -1,5 +1,6 @@
 <%= javascript_include_tag 'galleria-1.4.2' %>
 <%= javascript_include_tag 'galleria.twelve.min' %>
+<%= javascript_include_tag 'galleries' %>
 
 <% title "Gallery" %>
 
@@ -25,15 +26,5 @@
 		<% end %>
 
 	]
-
-	Galleria.run('.galleria', {
-		dataSource: galleria_data,
-		height: '550px',
-		theme: 'twelve',
-		imageCrop: false,
-		transition: 'fade',
-		fullscreenCrop: false,
-		fullscreenTransition: 'fade'
-	});
 
 </script>
