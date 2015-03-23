@@ -82,7 +82,7 @@
     position: absolute;
     left: 0;
     bottom: 1px;
-    background: url(twelve-thumbs.png) no-repeat 50% 50%;
+    background: url(<%= asset_path('twelve-thumbs.png') %>) no-repeat 50% 50%;
     cursor: pointer;
 }
 
@@ -92,7 +92,7 @@
 .galleria-theme-twelve.light .galleria-popout{bottom:0;height:30px;}
 
 .galleria-theme-twelve.light .galleria-thumblink{
-    background-image: url(twelve-thumbs-neg.png);
+    background-image: url(<%= asset_path('twelve-thumbs-neg.png') %>);
 }
 .galleria-theme-twelve .galleria-fullscreen,
 .galleria-theme-twelve .galleria-popout {
@@ -110,7 +110,7 @@
     background-position: 50% 50%;
 }
 .galleria-theme-twelve.light .galleria-popout{
-    background-image: url(twelve-popout-neg.png);
+    background-image: url(<%= asset_path('twelve-popout-neg.png') %>);
 }
 .galleria-theme-twelve .galleria-play {
     left: 30px;
@@ -118,7 +118,7 @@
     background-position: 10px 9px;
 }
 .galleria-theme-twelve.light .galleria-play{
-    background-image: url(twelve-playpause-neg.png);
+    background-image: url(<%= asset_path('twelve-playpause-neg.png') %>);
 }
 .galleria-theme-twelve .galleria-play.playing { background-position: 10px -91px }
 .galleria-theme-twelve .galleria-fullscreen.open { background-position: 8px -93px }
@@ -149,7 +149,7 @@
     left: 0;
     width: 0;
     height: 0;
-    background: url(twelve-bg.png);
+    background: url(<%= asset_path('twelve-bg.png') %>);
     z-index: 2;
 }
 .galleria-theme-twelve .galleria-thumbnails-list {
@@ -196,7 +196,7 @@
 .galleria-theme-twelve.light .galleria-info-title{color:#000;}
 .galleria-theme-twelve .galleria-info-text { padding-left: 10px }
 .galleria-theme-twelve .galleria-counter {
-    background: url(twelve-separator.png) no-repeat 100% 0;
+    background: url(<%= asset_path('twelve-separator.png') %>) no-repeat 100% 0;
     display: inline-block;
     *display: inline;
     padding-right: 10px;
