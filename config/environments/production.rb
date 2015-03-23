@@ -49,11 +49,10 @@ BarGameOlympics::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( flipclock.js jquery.tools.min.js jquery.colorbox.js)
+  config.assets.precompile += %w( jquery.tools.min.js jquery.colorbox.js)
   config.assets.precompile += %w( tablesorter/jquery.tablesorter.min.js tablesorter/jquery.tablesorter.widgets.min.js)
   config.assets.precompile += %w( tablesorter/theme.ice.css stats.js medals_heatmap.js flipclock.css)
-  config.assets.precompile += %w( galleries.js)
-  config.assets.precompile += %w( galleria-1.4.2.js galleria.twelve.min.js galleria.twelve.css)
+  config.assets.precompile += %w( galleria.twelve.css)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
