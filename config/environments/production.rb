@@ -53,7 +53,7 @@ BarGameOlympics::Application.configure do
   config.assets.precompile += %w( tablesorter/jquery.tablesorter.min.js tablesorter/jquery.tablesorter.widgets.min.js)
   config.assets.precompile += %w( tablesorter/theme.ice.css stats.js medals_heatmap.js flipclock.css)
   config.assets.precompile += %w( galleries.js)
-  config.assets.precompile += %w( galleria-1.4.2 galleria.twelve.min.js galleria.twelve.css)
+  config.assets.precompile += %w( galleria-1.4.2.js galleria.twelve.min.js galleria.twelve.css)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
