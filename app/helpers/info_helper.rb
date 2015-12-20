@@ -14,8 +14,8 @@ module InfoHelper
 		 else
 		 	#link_to("assign", new_match_path, {:class => "btn btn-primary btn-xs"})
 		 	link_to(
-		 		"assign", 
-		 		{ :controller => 'matches', :action => 'new', :arena_id => "#{arena.id}" } , 
+		 		"assign",
+		 		{ :controller => 'matches', :action => 'new', :arena_id => "#{arena.id}" } ,
 		 		{ :class => "btn btn-primary btn-xs assign-button", :data_sport => "#{arena.sport.name}" }
 		 	)
 		 end

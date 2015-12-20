@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
- 
+
 
   def create
     @article = Article.new(params[:article])

@@ -24,7 +24,7 @@ class InfoController < ApplicationController
   end
 
   def rules_shuffleboard
-    
+  
   end
 
   def rules_foosball
