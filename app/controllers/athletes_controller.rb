@@ -16,7 +16,7 @@ class AthletesController < ApplicationController
     if @athlete.save
       redirect_to @athlete, :notice => "Successfully created athlete."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -29,7 +29,7 @@ class AthletesController < ApplicationController
     if @athlete.update_attributes(params[:athlete])
       redirect_to @athlete, :notice  => "Successfully updated athlete."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 

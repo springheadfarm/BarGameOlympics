@@ -17,7 +17,7 @@ class GalleriesController < ApplicationController
     if @gallery.save
       redirect_to @gallery, :notice => "Successfully created gallery."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -30,7 +30,7 @@ class GalleriesController < ApplicationController
     if @gallery.update_attributes(params[:gallery])
       redirect_to @gallery, :notice  => "Successfully updated gallery."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 
