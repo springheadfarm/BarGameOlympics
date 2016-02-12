@@ -45,8 +45,8 @@ namespace :setup do
 	task :populate_matches => :environment do
 		
 		puts "Removing old matches"
-		#Participation.joins(:match).where(matches: { year: 2015 }).delete_all
-		Match.where(:year => 2015).delete_all
+		Participation.joins(:match).where(matches: { year: 2016 }).delete_all
+		Match.where(:year => 2016).delete_all
 
 		puts "Building new matches"
 		contents = File.read('public/matches.csv')
@@ -64,7 +64,7 @@ namespace :setup do
 			match = Match.new
 			match.sport = sport
 			match.group = group
-			match.year = 2015
+			match.year = 2016
 			match.save
 			p = Participation.new
 			p.athlete = a1

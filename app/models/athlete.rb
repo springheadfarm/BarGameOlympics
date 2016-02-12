@@ -15,7 +15,7 @@ class Athlete < ActiveRecord::Base
   scope :active, -> { where(active: true) }
   scope :inactive, -> { where(active: false) }
 
-  scope :active_ordered_by_matches_unplayed, -> {joins(:matches).where('matches.started_at is NULL and matches.year=2015').group('athletes.id').order("count(matches.id) desc")}
+  scope :active_ordered_by_matches_unplayed, -> {joins(:matches).where('matches.started_at is NULL and matches.year=2016').group('athletes.id').order("count(matches.id) desc")}
 
   def full_name
   	last_name + ', ' + first_name
