@@ -15,7 +15,7 @@ BarGameOlympics::Application.routes.draw do
   get 'matches/:match_id/:arena_id/start' => 'matches#start', :as => :start_match
   get 'matches/:match_id/cancel' => 'matches#cancel', :as => :cancel_match
   get 'matches/:match_id/record' => 'matches#record', :as => :record_match
-  get 'matches/:match_id/record_winner' => 'matches#record_winner'
+  post 'matches/:match_id/record_winner' => 'matches#record_winner'
 
   resources :poll_responses
   resources :poll_answers
